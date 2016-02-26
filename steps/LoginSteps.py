@@ -5,7 +5,7 @@ __author__ = 'hcassus'
 
 class LoginPageSteps():
 
-	VALID_PASSWORD = os.environ.get('VALID_PASSWORD','')
+    VALID_PASSWORD = os.environ.get('VALID_PASSWORD','')
     VALID_LOGIN = os.environ.get('VALID_LOGIN','')
 
     @when('I log in with valid credentials')
