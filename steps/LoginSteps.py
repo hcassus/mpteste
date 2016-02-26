@@ -11,6 +11,6 @@ class LoginPageSteps():
 
     @when('I log in with valid credentials')
     def perform_login(self):
-        LoginPage.fill_in_user_field(self, self.VALID_LOGIN)
-        LoginPage.fill_in_password_field(self, self.VALID_PASSWORD)
+        LoginPage.fill_in_user_field(self, LoginPageSteps.VALID_LOGIN)
+        LoginPage.fill_in_password_field(self, LoginPageSteps.VALID_PASSWORD)
         LoginPage.click_enter_button(self)
