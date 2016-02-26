@@ -7,7 +7,11 @@ __author__ = 'hcassus'
 class MainPage(GenericPage):
 
     locator_logged_user = (By.ID, 'profile-text')
+    locator_avatar = (By.CLASS_NAME, 'foto-do-usuario')
 
-    def obter_usuario(self):
-        elemento_user = self.driver.find_element(*MainPage.locator_logged_user)
-        return elemento_user.text
+    def obtain_user(self):
+        avatar_element = self.driver.find_element(*self.locator_avatar)
+        avatar_element.click()
+
+        user_element = self.driver.find_element(*self.locator_logged_user)
+        return user_element.text

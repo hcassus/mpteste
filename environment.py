@@ -2,7 +2,6 @@ from selenium import webdriver
 
 __author__ = 'hcassus'
 
-
 def before_all(context):
     context.driver = webdriver.Firefox()
     context.driver.maximize_window()

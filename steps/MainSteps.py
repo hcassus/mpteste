@@ -7,5 +7,5 @@ __author__ = 'hcassus'
 class MainSteps():
 
     @then('I check I am logged in as "{user}"')
-    def verificar_usuario(self, user):
-        assert MainPage.obter_usuario(self) == user
+    def verify_logged_user(self, user):
+        assert MainPage.obtain_user(self) == user

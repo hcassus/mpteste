@@ -5,5 +5,5 @@ from selenium import webdriver
 class GenericSteps():
 
     @given('I access "{url}"')
-    def acess_url(self, url):
+    def access_url(self, url):
         self.driver.get(url)

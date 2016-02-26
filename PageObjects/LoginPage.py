@@ -7,23 +7,23 @@ __author__ = 'hcassus'
 
 class LoginPage(GenericPage):
 
-    locator_user = (By.ID, 'id_usuario')
-    locator_password = (By.ID, 'id_senha')
-    locator_access = (By.XPATH, '//button[text() = "ENTRAR"]')
+    user_locator = (By.ID, 'id_usuario')
+    password_locator = (By.ID, 'id_senha')
+    access_locator = (By.XPATH, '//button[text() = "ENTRAR"]')
 
     VALID_PASSWORD = os.environ.get('VALID_PASSWORD','')
     VALID_LOGIN = os.environ.get('VALID_LOGIN','')
 
-    def preencher_usuario(self, user):
-        user_element = self.driver.find_element(*LoginPage.locator_user)
+    def fill_in_user_field(self, user):
+        user_element = self.driver.find_element(*LoginPage.user_locator)
         user_element.send_keys(user)
 
-    def preencher_senha(self, password):
-        password_element = self.driver.find_element(*LoginPage.locator_password)
+    def fill_in_password_field(self, password):
+        password_element = self.driver.find_element(*LoginPage.password_locator)
         password_element.send_keys(password)
 
-    def clicar_entrar(self):
-        access_element = self.driver.find_element(*LoginPage.locator_access)
+    def click_enter_button(self):
+        access_element = self.driver.find_element(*LoginPage.access_locator)
         access_element.click()
 
 

@@ -5,8 +5,11 @@ __author__ = 'hcassus'
 
 class LoginPageSteps():
 
+	VALID_PASSWORD = os.environ.get('VALID_PASSWORD','')
+    VALID_LOGIN = os.environ.get('VALID_LOGIN','')
+
     @when('I log in with valid credentials')
-    def efetuar_login(self):
-        LoginPage.preencher_usuario(self, LoginPage.VALID_LOGIN)
-        LoginPage.preencher_senha(self, LoginPage.VALID_PASSWORD)
-        LoginPage.clicar_entrar(self)
+    def perform_login(self):
+        LoginPage.fill_in_user_field(self, self.VALID_LOGIN)
+        LoginPage.fill_in_password_field(self, self.VALID_PASSWORD)
+        LoginPage.click_enter_button(self)

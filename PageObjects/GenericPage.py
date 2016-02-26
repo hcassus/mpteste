@@ -3,5 +3,5 @@ __author__ = 'hcassus'
 
 class GenericPage:
 
-    def obter_titulo(self):
+    def obtain_title(self):
         return self.driver.title
