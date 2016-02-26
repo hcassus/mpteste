@@ -1,12 +1,13 @@
 from behave import when
 from PageObjects.LoginPage import LoginPage
+import os
 
 __author__ = 'hcassus'
 
 class LoginPageSteps():
 
-    VALID_PASSWORD = os.environ.get('VALID_PASSWORD','')
-    VALID_LOGIN = os.environ.get('VALID_LOGIN','')
+    VALID_PASSWORD = os.environ.get('VALID_PASSWORD', '')
+    VALID_LOGIN = os.environ.get('VALID_LOGIN', '')
 
     @when('I log in with valid credentials')
     def perform_login(self):
